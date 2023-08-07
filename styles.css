@@ -1,0 +1,67 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4781bc;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    align-items: center; /* Centra verticalmente los elementos */
+    display: flex;
+}
+
+.logo {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción original */
+    margin-right: 20px; /* Agrega un espacio entre la imagen y el encabezado */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.project h2 {
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.project-content {
+    display: none;
+    
+}
