@@ -7,7 +7,7 @@ header {
     background-color: #4781bc;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    
     align-items: center; /* Centra verticalmente los elementos */
     display: flex;
 }
@@ -24,10 +24,12 @@ header {
     padding: 20px;
 }
 
+
+
 nav {
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 nav a {
