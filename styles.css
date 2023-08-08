@@ -60,7 +60,7 @@ nav a {
     background-color: #f4f4f4;
     width: 100%;
     align-items: center;
-    text-align: center;
+    text-align: start;
 }
 
 .project h2 {
