@@ -24,7 +24,7 @@ header {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    align-items: start;
+    align-items: center;
 }
 
 article.a {
@@ -59,7 +59,8 @@ nav a {
     padding: 10px;
     background-color: #f4f4f4;
     width: 100%;
-    align-items: start;
+    align-items: center;
+    text-align: center;
 }
 
 .project h2 {
