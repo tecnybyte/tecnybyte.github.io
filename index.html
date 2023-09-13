@@ -22,7 +22,7 @@
     
     <div class="container">
         <section class="project">
-            <h2>Proyecto 1: control de servomotores</h2>
+            <h2>Proyecto 1: Coche a control Bluetooth</h2>
             <button class="toggle-button">Abrir</button>
             <div class="project-content">
                 <!-- Contenido del proyecto -->
@@ -31,23 +31,65 @@
                         <img src="turret.jpg" alt="Control se servomotores">
                         <h2>Control de servomotores con Arduino</h2>
                         <a href="https://youtube.com/shorts/Dp0-tGRsnDc?feature=share">explicacion</a>
-                        <p>En este proyecto te mostrare como controlar servomotores con el monitor serial</p>
-                        <h3>Materiales Necesarios</h3>
+                        <p>En este proyecto repare un coche radio control descompuesto por un sistema BT ocupe el espacio 3 del motor para la direccion del coche y el espacio 1 para la fuerza del coche</h3>
                         <ul>
                             <li>Arduino Uno</li>
-                            <li>servomotores</li>
-                          
-                            <!-- ... (otros materiales) -->
+                            <li>motor shield L293D</li>
+                            <li>motores (en mi caso 2)</li>
+                            <li>hc-05 o hc-06</li>
+                            <li>alguna bateria capas de dar el voltage y amperage que necesites</li>
                         </ul>
                         <h3>Código de Arduino</h3>
-                        <pre><code id="arduino-code"> // Aquí va el código de Arduino
-            void setup() {
-                // Configuración inicial
-            }
-            
-            void loop() {
-                // Bucle principal
-            }
+                        <pre><code id="arduino-code"> 
+                            #include AFMotor.h // Importa la biblioteca Adafruit Motor Shield agrega <> a los lados de AFMotor
+
+                            AF_DCMotor motor1(1);  // Configura el motor 1 en el puerto M1
+                            AF_DCMotor motor2(3);  // Configura el motor 2 en el puerto M3
+                            
+                            char command;  // Variable para almacenar el comando recibido desde Bluetooth
+                            
+                            void setup() {
+                              Serial.begin(9600);  // Inicia la comunicación serial
+                            }
+                            
+                            void loop(){
+                              if(Serial.available() > 0){  // Si hay datos disponibles en el puerto serial
+                                command = Serial.read();  // Lee el comando
+                                
+                                // Controla el motor 1 para avanzar y retroceder
+                                switch(command){
+                                  case 'F':  // Avanzar
+                                    motor1.setSpeed(255);
+                                    motor1.run(FORWARD);
+                                    break;
+                                  case 'B':  // Retroceder
+                                    motor1.setSpeed(255);
+                                    motor1.run(BACKWARD);
+                                    break;
+                                }
+                            
+                                // Controla el motor 2 para girar a la izquierda o derecha
+                                switch(command){
+                                  case 'L':  // Girar a la izquierda
+                                    motor2.setSpeed(255);
+                                    motor2.run(FORWARD);
+                                    break;
+                                  case 'R':  // Girar a la derecha
+                                    motor2.setSpeed(255);
+                                    motor2.run(BACKWARD);
+                                    break;
+                                }
+                                
+                                // Detiene ambos motores si se envía "S"
+                                if (command == 'S') {
+                                  motor1.setSpeed(0);
+                                  motor2.setSpeed(0);
+                                  motor1.run(RELEASE);
+                                  motor2.run(RELEASE);
+                                }
+                              }
+                            }
+                            
                         </code></pre>
                         <button id="copy-button">Copiar Código</button>
                     </article>
