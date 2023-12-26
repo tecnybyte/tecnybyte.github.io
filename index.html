@@ -1,135 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Proyectos de Arduino</title>
+    <title>Tecnybyte</title>
+    
 </head>
 <body>
     <header>
-        <img src="img/logo.jpeg" alt="logo" class="logo" >
-        <h1>Proyectos de Arduino</h1> 
-        <nav class="navar">
+        <img src="img/logo.jpeg" alt="logo" class="logo">
+        <h1>Proyectos de Arduino</h1>
+    </header>
+
+    <nav>
+        <ul>
             <a href="https://tecnybyte.github.io/">Inicio</a>
             <a href="https://www.youtube.com/channel/UCYLxRvsSmww3kn2-urjL1VA">YouTube</a>
             <a href="https://www.tiktok.com/@tecnybyte">TikTok</a>
-         
-        </nav>
-    </header>
+        </ul>
+    </nav>
 
-    
-    
-    <div class="container">
-        <section class="project">
-            <h2>Proyecto 1: Coche a control Bluetooth</h2>
-            <button class="toggle-button">Abrir</button>
-            <div class="project-content">
-                <!-- Contenido del proyecto -->
-                <div class="container">
-                    <article>
-                        <img src="coche.jpg" alt="control BT">
-                        <h2>Control de coche con Arduino</h2>
-                        <!-- <a href="https://youtube.com/shorts/Dp0-tGRsnDc?feature=share">explicacion</a> -->
-                        <p>
-                            En este proyecto repare un coche radio control descompuesto por un sistema BT ocupe el espacio 3 
-                        </p>
-                        <p>
-                            del motor para la direccion del coche y el espacio 1 para la fuerza del coche
-                        </p>
+    <section class="main-container">
+        <aside>
+           <section class="videop">
+            <h2>
+                !Ultimo video¡
+            </h2>
+            <section class="video-section">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fY3qXp_Z7zg?si=giCgrYIB23aFCZP6?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+            <p>
+                Gracias por seguir apoyando al canal
+            </p>
+           </section>
+        </aside>
 
-                        <h3>
-                            Materiales
-                        </h3>
-
-                        <ul>
-                            <li>Arduino Uno</li>
-                            <li>motor shield L293D</li>
-                            <li>motores (en mi caso 2)</li>
-                            <li>hc-05 o hc-06</li>
-                            <li>alguna bateria capas de dar el voltage y amperage que necesites</li>
-                        </ul>
-                        <h3>Código de Arduino</h3>
-
-                        <a href="Codigos/coche_bt/coche_bt.ino" download="proyecto1.ino" class="download-button">Descargar Código</a>
-                      
-                    </article>
-                </div>
-            </div>
-        </section>
+        <main>
+            <article>
+                <!-- Contenido del artículo 1 -->
+                <section class="project">
+                    <h2>Proyecto 1: Coche a control Bluetooth</h2>
+                    <button class="toggle-button">Abrir</button>
+                    <div class="project-content">
+                        <!-- Contenido del proyecto -->
+                        <div class="project-container">
+                            <article>
+                                <img src="coche.jpg" alt="control BT">
+                                <h2>Control de coche con Arduino</h2>
+                                <p>
+                                    En este proyecto repare un coche radio control descompuesto por un sistema BT ocupé el espacio 3 
+                                </p>
+                                <p>
+                                    del motor para la dirección del coche y el espacio 1 para la fuerza del coche
+                                </p>
         
+                                <h3>Materiales</h3>
+        
+                                <ul>
+                                    <li>Arduino Uno</li>
+                                    <li>Motor shield L293D</li>
+                                    <li>Motores (en mi caso, 2)</li>
+                                    <li>HC-05 o HC-06</li>
+                                    <li>Alguna batería capaz de dar el voltaje y amperaje que necesites</li>
+                                </ul>
+                                <h3>Código de Arduino</h3>
+        
+                                <a href="Codigos/coche_bt/coche_bt.ino" download="proyecto1.ino" class="download-button">Descargar Código</a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </article>
 
+            <article>
+                <section class="project">
+                    <h2>Proyecto 2: Traductor de morse</h2>
+                    <button class="toggle-button">Abrir</button>
+                    <div class="project-content">
+                        <div class="project-container">
+                            <article>
+                                <img src="img/morse traductor.jpeg" width="90%" height="auto" alt="morse traductor">
+                                <h2>Traductor morse con Arduino</h2>
+                                <p>En este proyecto aprenderás cómo hacer un traductor de morse mediante botones y un LCD I2C</p>
+                                <p>Se puede implementar para aprender también sobre la clave morse</p>
+                                <h3>Materiales Necesarios</h3>
+                                <ul>
+                                    <li>Arduino Uno</li>
+                                    <li>LCD I2C</li>
+                                    <li>4 botones de 4 pines</li>
+                                    <li>4 resistencias de 1kΩ </li>
+                                </ul>
+                                <h3>Descargar Código de Arduino para Proyecto 2</h3>
+                                <a href="Codigos/traductor_morse/traductor_morse.ino" download="proyecto2.ino" class="download-button">Descargar Código</a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <!-- Agrega más artículos según sea necesario -->
+            <article>
+                <!-- Contenido del artículo 3 -->
+            </article>
+            <article>
+                <!-- Contenido del artículo 4 -->
+            </article>
+            <article>
+                <!-- Contenido del artículo 5 -->
+            </article>
+        </main>
+    </section>
 
-
-         <section class="project">
-            <h2>Proyecto 2: Traductor de morse</h2>
-            <button class="toggle-button">Abrir</button>
-            <div class="project-content">
-               
-                <div class="container">
-                    <article>
-                        <img src="img/morse traductor.jpeg" width="90%" height="auto" alt="morse traductor">
-                        <h2>Traductor morse con Arduino</h2>
-                        <p>En este proyecto aprenderas a como hacer un traductor de morse mediante botones y un lcd i2c</p>
-                        <p>se puede implementar para aprender tambien sobre la clabe morse </p>
-                        <h3>Materiales Necesarios</h3>
-                        <ul>
-                            <li>Arduino Uno</li>
-                            <li>LCD i2c</li>
-                            <li>4 botones de 4 pines</li>
-                            <li>4resistencias de 1kΩ </li>
-                            
-                        </ul>
-                        <!-- Otra sección de código -->
-                        <h3>Descargar Código de Arduino para Proyecto 2</h3>
-                        <a href="Codigos/traductor_morse/traductor_morse.ino" download="proyecto2.ino" class="download-button">Descargar Código</a>
-
-                    </article>
-                </div>
-            </div>
-        </section>
-
-<!-- <section class="project">
-            <h2>Proyecto 2: Robot Seguidor de Línea</h2>
-            <button class="toggle-button">Abrir</button>
-            <div class="project-content">
-               
-                <div class="container">
-                    <article>
-                        <img src="turret.jpg" alt="Turret Bluetooth Nerf">
-                        <h2>Control de Turret Nerf mediante Bluetooth con Arduino</h2>
-                        <p>En este proyecto, aprenderás cómo construir y programar una turret Nerf controlada por Bluetooth utilizando Arduino.</p>
-                        <p>La turret puede girar y disparar dardos Nerf en respuesta a comandos enviados desde una aplicación móvil a través de Bluetooth.</p>
-                        <h3>Materiales Necesarios</h3>
-                        <ul>
-                            <li>Arduino Uno</li>
-                            <li>Módulo Bluetooth HC-05</li>
-                            <li>Servos para el movimiento</li>
-                            <li>Motor para el disparo</li>
-                            
-                        </ul>
-                        <h3>Código de Arduino</h3>
-                        <pre><code id="arduino-code"> // Aquí va el código de Arduino
-            void setup() {
-                // Configuración inicial
-            }
-            
-            void loop() {
-                // Bucle principal
-            }
-                        </code></pre>
-                        <button id="copy-button">Copiar Código</button>
-                    </article>
-                </div>
-            </div>
-        </section>-->
-
-        <!-- Agrega más secciones de proyectos aquí -->
-
-    </div>
-
-    
+    <footer>
+        <p>&copy; 2023 Tecnybyte. por un 2024 de nuevas experiencias.</p>
+    </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
