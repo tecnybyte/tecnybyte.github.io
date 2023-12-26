@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("Código copiado al portapapeles");
     });
 
+    
     // Repite este bloque para cada sección adicional si es necesario
 });
 
