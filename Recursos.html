@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Tecnybyte</title>
+    <link id="theme-style" rel="stylesheet" href="styles-light.css">
+    <link rel="stylesheet" href="styles-resources.css">
+    <link rel="icon" href="img/logo.jpeg">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">Tecnybyte</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="Recursos.html">Recursos</a></li>
+                <li><a href="https://discord.gg/gUueEGK4pu">Comunidad</a></li>
+                <li><a href="https://www.youtube.com/channel/UCYLxRvsSmww3kn2-urjL1VA">YouTube</a></li>
+                <li><a href="https://www.tiktok.com/@tecnybyte">TikTok</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+    </header>
+
+    <!-- Sección de Recursos -->
+    <main>
+        <article>
+            <section class="resource">
+                <h2>Recurso 1: Manual de Arduino</h2>
+                <button class="toggle-button">Abrir</button>
+                <div class="resource-content">
+                    <!-- Contenido del recurso -->
+                    <div class="resource-container">
+                        <h3>Manual Completo de Arduino</h3>
+                        <p>Este manual cubre todos los aspectos básicos y Medios de Arduino. Perfecto para principiantes.</p>
+                        <iframe src="Pdf/Guia Arduino.pdf" width="100%" height="500px"></iframe>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section class="resource">
+                <h2>Recurso 2: Guía de Sensores</h2>
+                <button class="toggle-button">Abrir</button>
+                <div class="resource-content">
+                    <div class="resource-container">
+                        <h3>Guía Completa de Sensores para Arduino</h3>
+                        <p>Una guía detallada sobre los diferentes tipos de sensores que se pueden utilizar con Arduino y cómo implementarlos en tus proyectos.</p>
+                        <iframe src="Pdf/Guia Sesnores.pdf" width="100%" height="500px"></iframe>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section class="resource">
+                <h2>Recurso 3: Hexapodo</h2>
+                <button class="toggle-button">Abrir</button>
+                <div class="resource-content">
+                    <div class="resource-container">
+                        <h3>Guía Completa de Investigacion Sobre Hexapodo</h3>
+                        <p>Una guía detallada sobre como hacer un Hexapodo.</p>
+                        <iframe src="Pdf/Informe.pdf" width="100%" height="500px"></iframe>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+   
+
+    <!-- JavaScript para cambiar de tema y expandir recursos -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButtons = document.querySelectorAll(".toggle-button");
+
+            toggleButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const resourceContent = this.nextElementSibling;
+                    resourceContent.classList.toggle("expanded");
+                    if (resourceContent.classList.contains("expanded")) {
+                        this.textContent = "Cerrar";
+                    } else {
+                        this.textContent = "Abrir";
+                    }
+                });
+            });
+        });
+
+        function toggleTheme() {
+            const currentTheme = document.getElementById('theme-style').getAttribute('href');
+            const lightTheme = 'styles-light.css';
+            const darkTheme = 'styles-dark.css';
+            
+            const newTheme = (currentTheme === lightTheme) ? darkTheme : lightTheme;
+            
+            document.getElementById('theme-style').setAttribute('href', newTheme);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,510 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+}
+
+#theme-toggle {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #e0e0e0;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #bbbbbb;
+}
+
+.featured {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured img, .featured video {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.updates {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+}
+
+.updates div {
+    flex: 1;
+    margin: 0 15px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.updates h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.updates ul {
+    list-style: none;
+    padding: 0;
+}
+
+.updates ul li {
+    margin: 10px 0;
+}
+
+.updates ul li a {
+    text-decoration: none;
+    color: #00bfff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.updates ul li a:hover {
+    color: #80dfff;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #444;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+}
+
+.social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social li a:hover {
+    color: #00bfff;
+    text-decoration: underline;
+}
+
+/* Estilos específicos para la sección de proyectos */
+.project {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project h2 {
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background-color: #00bfff;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #80dfff;
+}
+
+.project-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.project-content.expanded {
+    display: block;
+}
+
+/* Otros estilos del tema oscuro */
+body {
+    background-color: #121212;
+    color: #bbbbbb;
+}
+
+/* Encabezado */
+header {
+    background-color: #1c1c1c;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Otros estilos */
+footer {
+    background-color: #1c1c1c;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para la sección de proyectos */
+.project {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project h2 {
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background-color: #00bfff;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #0077b3;
+}
+
+.project-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #333333;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.project-content.expanded {
+    display: block;
+}
+
+/* Otros estilos del tema oscuro */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Encabezado */
+header {
+    background-color: #1c1c1c;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Otros estilos */
+footer {
+    background-color: #1c1c1c;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para la sección de recursos */
+.resource {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.resource h2 {
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background-color: #00bfff;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #0077b3;
+}
+
+.resource-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #333333;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.resource-content.expanded {
+    display: block;
+}
+
+/* Otros estilos del tema oscuro */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Encabezado */
+header {
+    background-color: #1c1c1c;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Otros estilos */
+footer {
+    background-color: #1c1c1c;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social li a:hover {
+    text-decoration: underline;
+}
