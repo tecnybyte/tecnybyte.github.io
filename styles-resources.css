@@ -1,4 +1,27 @@
-/* Estilos comunes para la sección de recursos */
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .resource-container {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .resource-item {
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+  
+    .resource-link {
+      display: block;
+      text-align: center;
+    }
+  }
+  
+  /* Estilos comunes para la sección de recursos */
 .resource-container {
     padding: 10px;
 }
@@ -25,3 +48,24 @@
 .download-button:hover {
     background-color: #0056b3;
 }
+/* Para pantallas móviles */
+@media (max-width: 768px) {
+    .recurso {
+      max-width: 100%;
+      padding: 10px;
+      margin: 0 auto;
+      font-size: 16px;
+      text-align: justify;
+    }
+  
+    .recurso img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .recurso a {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+  
