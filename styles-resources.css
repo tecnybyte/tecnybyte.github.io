@@ -68,4 +68,45 @@
       padding: 10px 0;
     }
   }
+  .resource-link {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .resource-link:hover {
+    background-color: #0056b3;
+  }
+  /* Ajustes para el header en pantallas móviles */
+@media (max-width: 768px) {
+    header {
+      padding: 10px;
+      text-align: center;
+      background-color: #333; /* Color de fondo */
+    }
+  
+    header h1 {
+      font-size: 24px; /* Tamaño más pequeño para el título */
+      color: white;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column; /* Coloca los enlaces uno debajo del otro */
+      align-items: center;
+    }
+  
+    nav a {
+      padding: 10px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    nav a:hover {
+      background-color: #0056b3; /* Añadir hover con color */
+    }
+  }
   

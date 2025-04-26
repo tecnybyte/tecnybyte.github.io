@@ -530,4 +530,99 @@ footer .social li a:hover {
       text-align: center;
     }
   }
+  .resource-link {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .resource-link:hover {
+    background-color: #0056b3;
+  }
+  /* Ajustes para el header en pantallas móviles */
+@media (max-width: 768px) {
+    header {
+      padding: 10px;
+      text-align: center;
+      background-color: #333; /* Color de fondo */
+    }
+  
+    header h1 {
+      font-size: 24px; /* Tamaño más pequeño para el título */
+      color: white;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column; /* Coloca los enlaces uno debajo del otro */
+      align-items: center;
+    }
+  
+    nav a {
+      padding: 10px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    nav a:hover {
+      background-color: #0056b3; /* Añadir hover con color */
+    }
+  }
+
+  /* Estilos generales del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Estilos para el ícono de hamburguesa */
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none; /* Esconder el menú por defecto en móviles */
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+  
+    nav ul li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .hamburger {
+      display: block; /* Mostrar el ícono de hamburguesa en móviles */
+    }
+  }
+  
   

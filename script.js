@@ -8,3 +8,13 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
         this.textContent = 'Cambiar a modo oscuro';
     }
 });
+
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+  

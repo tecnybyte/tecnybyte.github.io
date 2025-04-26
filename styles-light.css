@@ -1,3 +1,513 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF ;
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #FFF ;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007BFF ;
+}
+
+#theme-toggle {
+    background-color: #007BFF ;
+    color: #e0e0e0;
+    border: 2px solid #e0e0e0;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #e0e0e0;
+    color: #007BFF ;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FFF ;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #bbbbbb;
+}
+
+.featured {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured img, .featured video {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #007BFF ;
+}
+
+.updates {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #FFF ;
+}
+
+.updates div {
+    flex: 1;
+    margin: 0 15px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.updates h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.updates ul {
+    list-style: none;
+    padding: 0;
+}
+
+.updates ul li {
+    margin: 10px 0;
+}
+
+.updates ul li a {
+    text-decoration: none;
+    color: #00bfff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.updates ul li a:hover {
+    color: #80dfff;
+}
+
+footer {
+    background-color: #FFF ;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #444;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+}
+
+.social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social li a:hover {
+    color: #00bfff;
+    text-decoration: underline;
+}
+
+/* Estilos específicos para la sección de proyectos */
+.project {
+    background-color: #FFF ;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project h2 {
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background-color: #00bfff;
+    color: #FFF ;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #80dfff;
+}
+
+.project-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.project-content.expanded {
+    display: block;
+}
+
+/* Otros estilos del tema oscuro */
+body {
+    background-color: #FFF ;
+    color: #bbbbbb;
+}
+
+/* Encabezado */
+header {
+    background-color: #FFF ;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Otros estilos */
+footer {
+    background-color: #FFF ;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para la sección de proyectos */
+.project {
+    background-color: #FFF ;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project h2 {
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background-color: #00bfff;
+    color: #FFF ;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #0077b3;
+}
+
+.project-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #007BFF 333;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.project-content.expanded {
+    display: block;
+}
+
+/* Otros estilos del tema oscuro */
+body {
+    background-color: #FFF ;
+    color: #e0e0e0;
+}
+
+/* Encabezado */
+header {
+    background-color: #FFF ;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Otros estilos */
+footer {
+    background-color: #FFF ;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para la sección de recursos */
+.resource {
+    background-color: #FFF ;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.resource h2 {
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background-color: #00bfff;
+    color: #FFF ;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #0077b3;
+}
+
+.resource-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #007BFF 333;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.resource-content.expanded {
+    display: block;
+}
+
+/* Otros estilos del tema oscuro */
+body {
+    background-color: #FFF ;
+    color: #e0e0e0;
+}
+
+/* Encabezado */
+header {
+    background-color: #FFF ;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Otros estilos */
+footer {
+    background-color: #FFF ;
+    color: #00bfff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social li a:hover {
+    text-decoration: underline;
+}
 /* Estilos para móviles */
 @media (max-width: 768px) {
     body {
@@ -20,400 +530,99 @@
       text-align: center;
     }
   }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-header {
+  .resource-link {
+    padding: 10px 20px;
     background-color: #007bff;
-    color: #fff;
-    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .resource-link:hover {
+    background-color: #0056b3;
+  }
+  /* Ajustes para el header en pantallas móviles */
+@media (max-width: 768px) {
+    header {
+      padding: 10px;
+      text-align: center;
+      background-color: #007BFF ; /* Color de fondo */
+    }
+  
+    header h1 {
+      font-size: 24px; /* Tamaño más pequeño para el título */
+      color: white;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column; /* Coloca los enlaces uno debajo del otro */
+      align-items: center;
+    }
+  
+    nav a {
+      padding: 10px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    nav a:hover {
+      background-color: #0056b3; /* Añadir hover con color */
+    }
+  }
+
+  /* Estilos generales del header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #0056b3;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #0056b3;
-}
-
-#theme-toggle {
-    background-color: #fff;
-    color: #007bff;
-    border: 2px solid #007bff;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#theme-toggle:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.intro {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e9ecef;
-}
-
-.intro h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.intro p {
-    font-size: 18px;
-    color: #666;
-}
-
-.featured {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.featured img, .featured video {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-}
-
-.updates {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-}
-
-.updates div {
-    flex: 1;
-    margin: 0 15px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.updates h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.updates ul {
-    list-style: none;
-    padding: 0;
-}
-
-.updates ul li {
-    margin: 10px 0;
-}
-
-.updates ul li a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.updates ul li a:hover {
-    color: #0056b3;
-}
-
-footer {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #0056b3;
-}
-
-footer h2 {
-    margin-bottom: 10px;
-}
-
-.social {
-    list-style: none;
-    padding: 0;
-}
-
-.social li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.social li a:hover {
-    color: #e9ecef;
-    text-decoration: underline;
-}
-
-/* Estilos específicos para la sección de proyectos */
-.project {
-    background-color: #f5f5f5;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.project h2 {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-.toggle-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
     padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.toggle-button:hover {
-    background-color: #0056b3;
-}
-
-.project-content {
+    background-color: #007BFF ;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Estilos para el ícono de hamburguesa */
+  .hamburger {
     display: none;
-    padding: 20px;
-    margin-top: 10px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.project-content.expanded {
-    display: block;
-}
-
-/* Otros estilos del tema claro */
-body {
-    background-color: #ffffff;
-    color: #333333;
-}
-
-/* Encabezado */
-header {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Otros estilos */
-footer {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-footer h2 {
-    font-size: 18px;
-}
-
-footer .social {
-    list-style: none;
-    padding: 0;
-}
-
-footer .social li {
-    display: inline;
-    margin: 0 10px;
-}
-
-footer .social li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer .social li a:hover {
-    text-decoration: underline;
-}
-
-/* Estilos específicos para la sección de recursos */
-.resource {
-    background-color: #f5f5f5;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.resource h2 {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-.toggle-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 30px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.toggle-button:hover {
-    background-color: #0056b3;
-}
-
-.resource-content {
-    display: none;
-    padding: 20px;
-    margin-top: 10px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.resource-content.expanded {
-    display: block;
-}
-
-/* Otros estilos del tema claro */
-body {
-    background-color: #ffffff;
-    color: #333333;
-}
-
-/* Encabezado */
-header {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Otros estilos */
-footer {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-footer h2 {
-    font-size: 18px;
-}
-
-footer .social {
-    list-style: none;
-    padding: 0;
-}
-
-footer .social li {
-    display: inline;
-    margin: 0 10px;
-}
-
-footer .social li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer .social li a:hover {
-    text-decoration: underline;
-}
+    color: white;
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none; /* Esconder el menú por defecto en móviles */
+      flex-direction: column;
+      background-color: #007BFF ;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+  
+    nav ul li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .hamburger {
+      display: block; /* Mostrar el ícono de hamburguesa en móviles */
+    }
+  }
+  
+  

@@ -10,22 +10,23 @@
 
 </head>
 <body>
-    <!-- Encabezado -->
     <header>
-        <div class="logo">Tecnybyte</div>
+        <h1>Tecnybyte</h1>
         <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="Recursos.html">Recursos</a></li>
-                <li><a href="https://discord.gg/gUueEGK4pu">Comunidad</a></li>
-                <li><a href="https://www.youtube.com/channel/UCYLxRvsSmww3kn2-urjL1VA">YouTube</a></li>
-                <li><a href="https://www.tiktok.com/@tecnybyte">TikTok</a></li>
-                
-            </ul>
+          <ul id="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="Recursos.html">Recursos</a></li>
+            <li><a href="https://discord.gg/gUueEGK4pu">Comunidad</a></li>
+            <li><a href="https://www.youtube.com/channel/UCYLxRvsSmww3kn2-urjL1VA">YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@tecnybyte">TikTok</a></li>
+          </ul>
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Ícono de 3 rayas -->
         </nav>
         <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
-    </header>
+      </header>
+      
+    
 
     <!-- Introducción -->
     <section id="inicio" class="intro">
@@ -62,14 +63,14 @@
         </div>
         <div class="events">
             <h2>Eventos</h2>
-            <ul>
+           <!-- <ul>
                 <li><a href="#">Taller 1</a></li>
                 <li><a href="#">Webinar 1</a></li>
                 <li><a href="#">Feria 1</a></li>
                 <li><a href="#">Ver más</a></li>
             </ul>
         </div>
-    </section>
+    </section>-->
 
    
 
@@ -85,6 +86,9 @@
             document.getElementById('theme-style').setAttribute('href', newTheme);
         }
     </script>
+
+<script src="script.js"></script>
+
 
 </body>
 </html>
