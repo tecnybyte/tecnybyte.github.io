@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnybyte | Herramientas y Calculadoras Técnicas</title>
+    
+    <!-- Estilos y fuentes -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        .calc-section {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .calc-title {
+            color: #ffffff;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 8px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group label {
+            font-family: 'Share Tech Mono', monospace;
+            color: #8b949e;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .input-group input, .input-group select {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 16px;
+        }
+        .input-group input:focus, .input-group select:focus {
+            border-color: #2563eb;
+            outline: none;
+            box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+        }
+        .result-box {
+            background: #0d1117;
+            border: 1px solid #2563eb;
+            border-radius: 6px;
+            padding: 12px;
+            font-family: 'Share Tech Mono', monospace;
+            color: #58a6ff;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .calc-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .calc-btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between;">
+
+    <!-- Cursor Personalizado -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="logo-container">
+            <div class="tb-logo-badge">
+                <img src="assets/img/favicon.png" alt="Tecnybyte Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+            <div class="brand-text">
+                <h1>TECNY<span>BYTE</span></h1>
+                <span>Toolkit • Calculadoras Electrónicas</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">[ INICIO ]</a></li>
+                <li><a href="herramientas.html" style="color: #2563eb;">HERRAMIENTAS</a></li>
+                <li><a href="reparaciones.html">REPARACIONES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="section-container" style="padding-top: 20px; padding-bottom: 40px;">
+        <div class="eslogan-bar" style="margin-bottom: 15px;">> TOOLKIT_MODULE: ACTIVE_ELECTRONIC_CALCULATORS</div>
+        
+        <h2 class="section-title" style="text-align: left; margin-bottom: 10px;">
+            BANCO DE <span>CÁLCULO TÉCNICO</span>
+        </h2>
+        <p style="color: var(--text-muted); font-family: 'Share Tech Mono', monospace; margin-bottom: 25px;">
+            > Herramientas de precisión para diseño de circuitos, dimensionamiento de cables y análisis de componentes.
+        </p>
+
+        <!-- 1. CALCULADORA LEY DE OHM -->
+        <div class="calc-section">
+            <div class="calc-title">> 1. Calculadora de Ley de Ohm y Potencia</div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Voltaje (V):</label>
+                    <input type="number" id="ohm-v" placeholder="Ej. 12">
+                </div>
+                <div class="input-group">
+                    <label>Corriente (I en Amperes):</label>
+                    <input type="number" id="ohm-i" placeholder="Ej. 0.5">
+                </div>
+                <div class="input-group">
+                    <label>Resistencia (R en Ohms):</label>
+                    <input type="number" id="ohm-r" placeholder="Ej. 24">
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calcularOhm()">[ CALCULAR VALORES FALTANTES ]</button>
+            <div class="result-box" id="ohm-result">> Ingresa al menos 2 valores para calcular el tercero y la potencia (P).</div>
+        </div>
+
+        <!-- 2. CÓDIGO DE COLORES DE RESISTENCIAS -->
+        <div class="calc-section">
+            <div class="calc-title">> 2. Código de Colores (Resistencias de 4 Bandas)</div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Banda 1 (1er Dígito):</label>
+                    <select id="b1" onchange="calcularResistencia()">
+                        <option value="0">Negro (0)</option>
+                        <option value="1" selected>Marrón (1)</option>
+                        <option value="2">Rojo (2)</option>
+                        <option value="3">Naranja (3)</option>
+                        <option value="4">Amarillo (4)</option>
+                        <option value="5">Verde (5)</option>
+                        <option value="6">Azul (6)</option>
+                        <option value="7">Violeta (7)</option>
+                        <option value="8">Gris (8)</option>
+                        <option value="9">Blanco (9)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Banda 2 (2do Dígito):</label>
+                    <select id="b2" onchange="calcularResistencia()">
+                        <option value="0">Negro (0)</option>
+                        <option value="1">Marrón (1)</option>
+                        <option value="2" selected>Rojo (2)</option>
+                        <option value="3">Naranja (3)</option>
+                        <option value="4">Amarillo (4)</option>
+                        <option value="5">Verde (5)</option>
+                        <option value="6">Azul (6)</option>
+                        <option value="7">Violeta (7)</option>
+                        <option value="8">Gris (8)</option>
+                        <option value="9">Blanco (9)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Multiplicador:</label>
+                    <select id="b3" onchange="calcularResistencia()">
+                        <option value="1">Negro (×1)</option>
+                        <option value="10">Marrón (×10)</option>
+                        <option value="100" selected>Rojo (×100)</option>
+                        <option value="1000">Naranja (×1k)</option>
+                        <option value="10000">Amarillo (×10k)</option>
+                        <option value="100000">Verde (×100k)</option>
+                        <option value="1000000">Azul (×1M)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Tolerancia:</label>
+                    <select id="b4" onchange="calcularResistencia()">
+                        <option value="5" selected>Dorado (±5%)</option>
+                        <option value="10">Plateado (±10%)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="result-box" id="res-result">> Valor: 1.2 kΩ (±5%)</div>
+        </div>
+
+        <!-- 3. RESISTENCIA PARA LED -->
+        <div class="calc-section">
+            <div class="calc-title">> 3. Calculadora de Resistencia para LED</div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Voltaje de Fuente (V):</label>
+                    <input type="number" id="led-vs" placeholder="Ej. 5 o 12" value="5">
+                </div>
+                <div class="input-group">
+                    <label>Caída de Voltaje del LED (V):</label>
+                    <input type="number" id="led-vf" placeholder="Ej. 2.0 (Rojo) o 3.2 (Azul)" value="2.0">
+                </div>
+                <div class="input-group">
+                    <label>Corriente del LED (mA):</label>
+                    <input type="number" id="led-current" placeholder="Ej. 20" value="20">
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calcularLed()">[ CALCULAR RESISTENCIA RECOMENDADA ]</button>
+            <div class="result-box" id="led-result">> Ingresa los valores para calcular la resistencia y disipación ideales.</div>
+        </div>
+
+        <!-- 4. DIVISOR DE VOLTAJE (INVERSO) -->
+        <div class="calc-section">
+            <div class="calc-title">> 4. Calculadora de Divisor de Voltaje (Obtener R1)</div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Voltaje de Entrada - Vin (V):</label>
+                    <input type="number" id="div-vin" placeholder="Ej. 5" value="5">
+                </div>
+                <div class="input-group">
+                    <label>Voltaje Deseado - Vout (V):</label>
+                    <input type="number" id="div-vout" placeholder="Ej. 3.3" value="3.3">
+                </div>
+                <div class="input-group">
+                    <label>Valor de Resistencia R2 (Ohms):</label>
+                    <input type="number" id="div-r2" placeholder="Ej. 10000" value="10000">
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calcularDivisor()">[ CALCULAR RESISTENCIA R1 ]</button>
+            <div class="result-box" id="div-result">> R1 necesaria: calculando...</div>
+        </div>
+
+        <!-- 5. CALIBRE DE CABLE (AWG) SEGÚN CORRIENTE -->
+        <div class="calc-section">
+            <div class="calc-title">> 5. Estimador de Calibre de Cable (AWG) por Corriente</div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Corriente Máxima (Amperes):</label>
+                    <input type="number" id="wire-i" placeholder="Ej. 15">
+                </div>
+            </div>
+            <button class="calc-btn" onclick="calcularCalibre()">[ ESTIMAR CALIBRE AWG RECOMENDADO ]</button>
+            <div class="result-box" id="wire-result">> Ingresa los amperes para obtener sugerencia de cableado seguro.</div>
+        </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 <span>TECNYBYTE</span>. Todos los derechos reservados. | Herramientas de Precisión</p>
+    </footer>
+
+    <!-- Scripts de Cálculo -->
+    <script src="script.js"></script>
+    <script>
+        // Lógica Ley de Ohm
+        function calcularOhm() {
+            let v = parseFloat(document.getElementById('ohm-v').value);
+            let i = parseFloat(document.getElementById('ohm-i').value);
+            let r = parseFloat(document.getElementById('ohm-r').value);
+            let resBox = document.getElementById('ohm-result');
+
+            let count = [!isNaN(v), !isNaN(i), !isNaN(r)].filter(Boolean).length;
+            if (count < 2) {
+                resBox.innerText = "> ERROR: Por favor ingresa exactamente dos valores.";
+                return;
+            }
+
+            if (isNaN(v)) {
+                v = i * r;
+                let p = v * i;
+                resBox.innerText = `> Calculado: V = ${v.toFixed(2)} V | Potencia (P) = ${p.toFixed(2)} W`;
+            } else if (isNaN(i)) {
+                i = v / r;
+                let p = v * i;
+                resBox.innerText = `> Calculado: I = ${i.toFixed(3)} A | Potencia (P) = ${p.toFixed(2)} W`;
+            } else if (isNaN(r)) {
+                r = v / i;
+                let p = v * i;
+                resBox.innerText = `> Calculado: R = ${r.toFixed(2)} Ω | Potencia (P) = ${p.toFixed(2)} W`;
+            }
+        }
+
+        // Lógica Código de Colores
+        function calcularResistencia() {
+            let b1 = document.getElementById('b1').value;
+            let b2 = document.getElementById('b2').value;
+            let b3 = document.getElementById('b3').value;
+            let b4 = document.getElementById('b4').value;
+
+            let digitos = parseInt(b1 + b2);
+            let mult = parseInt(b3);
+            let totalOhms = digitos * mult;
+
+            let textoValor = totalOhms >= 1000000 ? (totalOhms / 1000000) + " MΩ" : 
+                             totalOhms >= 1000 ? (totalOhms / 1000) + " kΩ" : 
+                             totalOhms + " Ω";
+
+            document.getElementById('res-result').innerText = `> Valor: ${textoValor} (±${b4}%)`;
+        }
+
+        // Lógica Resistencia para LED
+        function calcularLed() {
+            let vs = parseFloat(document.getElementById('led-vs').value);
+            let vf = parseFloat(document.getElementById('led-vf').value);
+            let currentMa = parseFloat(document.getElementById('led-current').value);
+            let resBox = document.getElementById('led-result');
+
+            if (isNaN(vs) || isNaN(vf) || isNaN(currentMa) || currentMa <= 0) {
+                resBox.innerText = "> ERROR: Ingresa valores válidos en todos los campos.";
+                return;
+            }
+
+            if (vs <= vf) {
+                resBox.innerText = "> ERROR: El voltaje de fuente debe ser mayor que la caída del LED.";
+                return;
+            }
+
+            let currentA = currentMa / 1000;
+            let rOhms = (vs - vf) / currentA;
+            let potenciaW = (vs - vf) * currentA;
+
+            resBox.innerText = `> Resistencia ideal: ${rOhms.toFixed(1)} Ω | Disipación mín: ${potenciaW.toFixed(2)} W`;
+        }
+
+        // Lógica Divisor de Voltaje Inverso (Hallar R1)
+        function calcularDivisor() {
+            let vin = parseFloat(document.getElementById('div-vin').value);
+            let vout = parseFloat(document.getElementById('div-vout').value);
+            let r2 = parseFloat(document.getElementById('div-r2').value);
+            let resBox = document.getElementById('div-result');
+
+            if (isNaN(vin) || isNaN(vout) || isNaN(r2) || r2 <= 0) {
+                resBox.innerText = "> ERROR: Ingresa valores válidos y asegúrate de que R2 > 0.";
+                return;
+            }
+
+            if (vout >= vin) {
+                resBox.innerText = "> ERROR: El voltaje deseado (Vout) debe ser menor que el voltaje de entrada (Vin).";
+                return;
+            }
+
+            // Fórmula despejada para R1: R1 = R2 * ((Vin / Vout) - 1)
+            let r1 = r2 * ((vin / vout) - 1);
+
+            let textoR1 = r1 >= 1000000 ? (r1 / 1000000).toFixed(2) + " MΩ" : 
+                          r1 >= 1000 ? (r1 / 1000).toFixed(2) + " kΩ" : 
+                          r1.toFixed(1) + " Ω";
+
+            let textoR2 = r2 >= 1000 ? (r2 / 1000).toFixed(2) + " kΩ" : r2 + " Ω";
+
+            resBox.innerText = `> Resultado: R1 necesaria = ${textoR1} (usando R2 = ${textoR2})`;
+        }
+
+        // Lógica Calibre de Cable (AWG)
+        function calcularCalibre() {
+            let amps = parseFloat(document.getElementById('wire-i').value);
+            let resBox = document.getElementById('wire-result');
+
+            if (isNaN(amps) || amps <= 0) {
+                resBox.innerText = "> ERROR: Ingresa un valor de corriente válido en amperes.";
+                return;
+            }
+
+            let awg = "";
+            if (amps <= 5) awg = "AWG 24 o AWG 22 (Ideal para señales y baja corriente)";
+            else if (amps <= 10) awg = "AWG 18 (Bueno para prototipos y pequeños motores)";
+            else if (amps <= 15) awg = "AWG 14 (Recomendado para fuentes de poder y cargas medias)";
+            else if (amps <= 25) awg = "AWG 10 o AWG 12 (Para corrientes elevadas de potencia)";
+            else awg = "AWG 8 o superior (Requiere conductores industriales de alta potencia)";
+
+            resBox.innerText = `> Calibre sugerido: ${awg}`;
+        }
+
+        // Calcular valores iniciales por defecto al cargar
+        calcularResistencia();
+        calcularLed();
+        calcularDivisor();
+    </script>
+</body>
+</html>

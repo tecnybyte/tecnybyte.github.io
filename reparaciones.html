@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnybyte | Banco de Reparaciones y Mantenimiento</title>
+    
+    <!-- Estilos y fuentes -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between;">
+
+    <!-- Cursor Personalizado -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="logo-container">
+            <div class="tb-logo-badge">
+                <img src="assets/img/favicon.png" alt="Tecnybyte Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+            <div class="brand-text">
+                <h1>TECNY<span>BYTE</span></h1>
+                <span>Banco de Reparaciones • Diagnóstico • Taller</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">[ INICIO ]</a></li>
+                <li><a href="reparaciones.html" style="color: var(--accent-blue);">REPARACIONES</a></li>
+                <li><a href="index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="section-container" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="eslogan-bar" style="margin-bottom: 20px;">> SYSTEM_MODULE: WORKSHOP_REPAIRS_ACTIVE</div>
+        
+        <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">
+            CENTRO DE <span>REPARACIÓN Y RESCATE TÉCNICO</span>
+        </h2>
+
+        <!-- Introducción -->
+        <div class="about-box" style="margin-bottom: 40px;">
+            <p style="color: var(--text-main); font-size: 18px; line-height: 1.6;">
+                > ¿Descartar o Reparar?<br>
+                En este espacio documentamos el proceso real detrás de la restauración de herramientas de taller, electrodomésticos y hardware tecnológico. El objetivo no es cambiar piezas al azar, sino aplicar **diagnósticos precisos, limpieza profunda y optimización mecánica** para alargar la vida útil de los equipos.
+            </p>
+        </div>
+
+        <!-- Fases del Proceso de Taller -->
+        <h3 style="color: #FFFFFF; font-family: 'Rajdhani', sans-serif; font-size: 24px; margin-bottom: 20px;">> METODOLOGÍA DE TRABAJO</h3>
+        <div class="specs-grid" style="margin-bottom: 50px;">
+            <div class="spec-card">
+                <div class="spec-icon">🔍</div>
+                <h3>1. Diagnóstico Inicial</h3>
+                <p>Pruebas de continuidad eléctrica, verificación de alimentación y aislamiento para detectar si el problema es eléctrico o mecánico antes de abrir el equipo.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🧰</div>
+                <h3>2. Desensamble y Limpieza</h3>
+                <p>Retiro de acumulaciones severas de polvo, residuos y agentes externos que bloquean los ejes. Limpieza de colectores de cobre y componentes internos.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">⚙️</div>
+                <h3>3. Lubricación y Ensamble</h3>
+                <p>Aplicación de aceites y lubricantes especializados en rodamientos trabados para recuperar el giro fluido, seguido de una prueba final de potencia.</p>
+            </div>
+        </div>
+
+        <!-- Proyecto Destacado / Video Principal -->
+        <h3 style="color: #FFFFFF; font-family: 'Rajdhani', sans-serif; font-size: 24px; margin-bottom: 20px;">> ÚLTIMO RESCATE REGISTRADO</h3>
+        <div class="spotlight-container" style="margin-bottom: 40px;">
+            <div class="video-card">
+                <div class="section-tag">
+                    <span>> CASO DE ESTUDIO #001: LIJADORA ROTATIVA</span>
+                    <span class="live-badge" style="background-color: var(--accent-blue); box-shadow: 0 0 10px var(--glow-blue);">EXITOSO</span>
+                </div>
+                <div class="video-content-grid">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/zfFEqT8T6_Q" title="Reparando una lijadora Skil paso a paso" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Restauración Completa de Lijadora Skil</h3>
+                        <p>> La herramienta encendía pero carecía de fuerza y el motor giraba muy lento. Mediante la limpieza a fondo del estator, rescate de rodamientos atascados con aceite lubricante y rectificación de tornillería dañada, se logró devolver al 100% su operatividad sin necesidad de comprar una nueva.</p>
+                        <a href="https://youtu.be/zfFEqT8T6_Q" target="_blank" class="watch-yt-btn" style="background-color: var(--accent-blue); box-shadow: 0 0 15px var(--glow-blue);">VER VIDEO EN YOUTUBE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Proyectos Futuros / Escalabilidad -->
+        <div class="about-box" style="text-align: center; border-style: dashed;">
+            <h3 style="color: #FFFFFF; margin-bottom: 10px;">> PRÓXIMAMENTE MÁS REPARACIONES</h3>
+            <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 20px;">
+                Este archivo de reparaciones se seguirá actualizando conforme entren nuevos retos de taller y hardware al banco de trabajo.
+            </p>
+            <a href="index.html#contacto" class="cta-btn">[ SOLICITAR COTIZACIÓN O CONSULTA ]</a>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 <span>TECNYBYTE</span>. Todos los derechos reservados. | Módulo de Reparaciones</p>
+    </footer>
+
+    <!-- Script del cursor y efectos -->
+    <script src="script.js"></script>
+</body>
+</html>
