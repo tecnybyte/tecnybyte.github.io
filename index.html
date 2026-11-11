@@ -1,299 +1,109 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnybyte | Electrónica, IoT, Automatización y Desarrollo Tecnológico</title>
-    
-    <!-- Metaetiquetas SEO Profesionales -->
-    <meta name="description" content="Tecnybyte comparte proyectos de electrónica, Arduino, ESP32, IoT, automatización, impresión 3D, programación y desarrollo tecnológico para estudiantes y profesionales.">
-    <meta name="author" content="Tecnybyte">
-    <meta name="theme-color" content="#0D1117">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://tecnybyte.github.io/">
-    <meta property="og:url" content="https://tecnybyte.github.io/">
-    <meta property="og:site_name" content="Tecnybyte">
-    <meta property="og:locale" content="es_MX">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tecnybyte">
-    <meta name="twitter:description" content="Electrónica, IoT, Automatización y Desarrollo Tecnológico">
-    <meta name="twitter:image" content="https://tecnybyte.github.io/assets/img/favicon.png">
-
-    <!-- Favicon / Logo para la pestaña del navegador -->
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Tecnybyte | Ideas, Electrónica y Automatización">
-    <meta property="og:description" content="Explora proyectos de hardware, microcontroladores, IoT y contenido técnico avanzado.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://tecnybyte.github.io/assets/img/favicon.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Tecnybyte - Electrónica e Innovación">
-    <meta name="keywords" content="Arduino, ESP32, ESP8266, Raspberry Pi, Electrónica, PLC, Automatización, IoT, Desarrollo Web, Programación, Microcontroladores, PCB, Impresión 3D">
-    
-    <!-- Google Fonts optimizadas -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
-    <!-- Enlace a la Hoja de Estilos CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d12">
+  <meta name="description" content="TECNYBYTE: electrónica, impresión 3D, IoT y programación. Proyectos reales, experimentos y conocimiento maker para construir tecnología juntos.">
+  <meta name="author" content="TECNYBYTE">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://tecnybyte.github.io/">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TECNYBYTE">
+  <meta property="og:title" content="TECNYBYTE — Construyendo tecnología">
+  <meta property="og:description" content="Electrónica, impresión 3D, IoT y programación. Construyamos esto juntos.">
+  <meta property="og:url" content="https://tecnybyte.github.io/">
+  <meta property="og:image" content="https://tecnybyte.github.io/assets/img/scara_robot.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>TECNYBYTE — Construyendo tecnología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="TECNYBYTE, inicio">
+      <img src="assets/img/favicon.png" alt="" width="42" height="42">
+      <span class="brand-name">TECNY<span>BYTE</span><small>MAKER LAB · MX</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+      <a href="#universo">Áreas</a><a href="#proyectos">Proyectos</a><a href="#videos">YouTube</a><a href="#historia">Nosotros</a>
+      <a class="nav-cta" href="https://www.youtube.com/@tecnybyte" target="_blank" rel="noopener">Suscríbete <span>↗</span></a>
+    </nav>
+  </header>
 
-    <!-- Pantalla de Carga Rápida (Pop-up Palabra x Palabra) -->
-    <div id="loader-screen">
-        <div class="loader-content">
-            <span class="loader-word">Ideas</span>
-            <span class="loader-word">•</span>
-            <span class="loader-word">Electrónica</span>
-            <span class="loader-word">•</span>
-            <span class="loader-word">Automatización</span>
-        </div>
-    </div>
-
-    <!-- Elementos Interactivos Globales -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-follower" id="cursor-follower"></div>
-    <div id="scroll-progress"></div>
-
-    <header>
-        <div class="logo-container">
-            <div class="tb-logo-badge">
-                <img src="assets/img/favicon.png" alt="Tecnybyte Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-            </div>
-            <div class="brand-text">
-                <h1>TECNY<span>BYTE</span></h1>
-                <span>Ideas • Electrónica • Automatización</span>
-            </div>
-        </div>
-
-        <!-- Botón de Hamburguesa para Celular -->
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav id="navMenu">
-            <ul>
-                <li><a href="#inicio" style="color: var(--accent-blue);">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#especialidades">Especialidades</a></li>
-                <li><a href="#youtube">YouTube</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="reparaciones.html">Reparaciones</a></li>
-                <li><a href="herramientas.html">Herramientas</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- 1. Hero Section -->
+  <main>
     <section class="hero" id="inicio">
-        <div class="eslogan-bar">> Electrónica • Automatización • Innovación</div>
-        <h2>INNOVACIÓN EN HARDWARE Y TECNOLOGÍA</h2>
-        <p>Acercando la ingeniería y el desarrollo de sistemas embebidos a estudiantes, makers y profesionales a través de contenido técnico avanzado.</p>
-        <div class="hero-buttons">
-            <a href="#nosotros" class="cta-btn">[ VER PROYECTOS ]</a>
-            <a href="#youtube" class="cta-btn secondary">[ VER VIDEOS ]</a>
-            <a href="#contacto" class="cta-btn">[ CONTACTAR ]</a>
+      <div class="hero-image" role="img" aria-label="Brazo robótico SCARA en un entorno de trabajo"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><i></i> LABORATORIO TECNOLÓGICO INDEPENDIENTE <span>— 01 / 04</span></p>
+        <h1>CONSTRUIMOS<br>EL <em>FUTURO</em><br>CON NUESTRAS MANOS.</h1>
+        <p class="hero-copy">Electrónica, fabricación digital y desarrollo tecnológico. Ideas que salen del papel, se convierten en prototipos y terminan funcionando en el mundo real.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyectos">EXPLORAR PROYECTOS <span>↗</span></a>
+          <a class="text-link" href="https://www.youtube.com/@tecnybyte" target="_blank" rel="noopener">VER CANAL DE YOUTUBE <span>▶</span></a>
         </div>
+      </div>
+      <div class="hero-index"><span>TECNYBYTE / EST. 2024</span><span>IDEAS · ELECTRÓNICA · INNOVACIÓN</span></div>
+      <a class="scroll-cue" href="#intro"><span></span> DESPLAZA PARA EXPLORAR</a>
+      <div class="hero-mark">TB<span>®</span></div>
     </section>
 
-    <!-- 2. ¿Quiénes somos? & Timeline -->
-    <section class="section-container" id="nosotros">
-        <h3 class="section-title">¿QUIÉNES <span>SOMOS?</span></h3>
-        <div class="about-box">
-            TecnyByte nace con el objetivo de acercar la electrónica y la tecnología a estudiantes, makers e ingenieros mediante contenido educativo, proyectos reales e innovación constante.
-        </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-year">2024</div>
-                <div class="timeline-desc">Fundación del canal y primeros prototipos hardware.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2025</div>
-                <div class="timeline-desc">Lanzamiento de proyectos IoT y domótica avanzada.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2026</div>
-                <div class="timeline-desc">Renovación total de imagen y expansión educativa.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">Futuro</div>
-                <div class="timeline-desc">Cursos especializados, comunidad y escalabilidad global.</div>
-            </div>
-        </div>
+    <section class="intro split-section" id="intro">
+      <div class="section-kicker">[ 00 — QUIÉNES SOMOS ]</div>
+      <div class="intro-heading"><h2>NO SOLO<br>HABLAMOS DE<br><em>TECNOLOGÍA.</em></h2></div>
+      <div class="intro-copy"><p class="lead">La abrimos, la entendemos, la modificamos y construimos algo nuevo.</p><p>TECNYBYTE es un espacio maker donde compartimos procesos reales de electrónica, programación, IoT e impresión 3D. Aprendemos experimentando y documentamos cada paso para que más personas se animen a crear.</p><a class="under-link" href="#historia">CONOCE NUESTRA HISTORIA <span>↗</span></a></div>
+      <div class="intro-stamp">CURIOSIDAD<br>EN ACCIÓN<span>TB / 001</span></div>
     </section>
 
-    <!-- 4. Áreas de Especialización -->
-    <section class="section-container" id="especialidades">
-        <h3 class="section-title">ÁREAS DE <span>ESPECIALIZACIÓN</span></h3>
-        <div class="specs-grid">
-            <div class="spec-card">
-                <div class="spec-icon">⚡</div>
-                <h3>Electrónica</h3>
-                <p>Diseño de circuitos analógicos y digitales, PCBs y análisis de componentes.</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">🤖</div>
-                <h3>Robótica</h3>
-                <p>Cinemática de brazos robóticos, servomotores y control de movimiento.</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">💻</div>
-                <h3>Programación</h3>
-                <p>Desarrollo de firmware en C++, Python y optimización de código en microcontroladores.</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">📡</div>
-                <h3>IoT</h3>
-                <p>Conectividad inalámbrica mediante MQTT, ESP32 y tableros en Node-RED.</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">🖨️</div>
-                <h3>Impresión 3D</h3>
-                <p>Prototipado rápido, optimización de perfiles de impresión y piezas mecánicas.</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">⚙</div>
-                <h3>Automatización</h3>
-                <p>Sistemas domóticos a escala, control industrial y lógica de relés.</p>
-            </div>
-        </div>
+    <section class="universe section-pad" id="universo">
+      <div class="section-head"><div><p class="section-kicker">[ 01 — NUESTRO UNIVERSO ]</p><h2>ÁREAS DE<br><em>EXPLORACIÓN</em></h2></div><p class="section-note">Distintas disciplinas.<br>Una misma mentalidad: crear.</p></div>
+      <div class="discipline-grid">
+        <article class="discipline-card discipline-electronics"><span class="card-number">01 / HARDWARE</span><div class="discipline-art circuit-art"><b></b><b></b><b></b><b></b><span>VCC<br>GND<br>IO 23</span></div><div><h3>Electrónica</h3><p>Circuitos, componentes, microcontroladores y prototipos que cobran vida.</p></div><span class="card-arrow">↗</span></article>
+        <article class="discipline-card discipline-print"><span class="card-number">02 / FABRICACIÓN</span><div class="discipline-art print-art"><div class="print-cube"></div><div class="print-beam"></div></div><div><h3>Impresión 3D</h3><p>Del diseño digital a piezas funcionales. Modelado, calibración y fabricación.</p></div><span class="card-arrow">↗</span></article>
+        <article class="discipline-card discipline-iot"><span class="card-number">03 / CONECTIVIDAD</span><div class="discipline-art iot-art"><div class="iot-node">ESP32</div><i></i><i></i><i></i></div><div><h3>IoT & Automatización</h3><p>Dispositivos conectados, sensores, domótica y sistemas inteligentes.</p></div><span class="card-arrow">↗</span></article>
+        <article class="discipline-card discipline-code"><span class="card-number">04 / DESARROLLO</span><div class="discipline-art code-art"><span>&lt;/&gt;</span><small>0101 0010<br>1010 1101<br>0011 1001</small></div><div><h3>Programación</h3><p>Firmware, herramientas digitales y software para resolver problemas reales.</p></div><span class="card-arrow">↗</span></article>
+      </div>
     </section>
 
-    <!-- 7. Tecnologías que Utilizamos (Carrusel Infinito) -->
-    <div class="tech-carousel">
-        <div class="tech-track">
-            <span class="tech-item">Arduino</span>
-            <span class="tech-item">ESP32</span>
-            <span class="tech-item">STM32</span>
-            <span class="tech-item">Raspberry Pi</span>
-            <span class="tech-item">Fusion 360</span>
-            <span class="tech-item">KiCad</span>
-            <span class="tech-item">Proteus</span>
-            <span class="tech-item">Python</span>
-            <span class="tech-item">C++</span>
-            <span class="tech-item">JavaScript</span>
-            <span class="tech-item">Arduino</span>
-            <span class="tech-item">ESP32</span>
-            <span class="tech-item">STM32</span>
-            <span class="tech-item">Raspberry Pi</span>
-            <span class="tech-item">Fusion 360</span>
-            <span class="tech-item">KiCad</span>
-            <span class="tech-item">Proteus</span>
-            <span class="tech-item">Python</span>
-            <span class="tech-item">C++</span>
-            <span class="tech-item">JavaScript</span>
-        </div>
-    </div>
-
-    <!-- 9. Canal de YouTube -->
-    <section class="section-container" id="youtube">
-        <h3 class="section-title">CANAL DE <span>YOUTUBE</span></h3>
-        <div class="spotlight-container">
-            <div class="video-card">
-                <div class="section-tag">
-                    <span>> VIDEO DESTACADO EN CANAL</span>
-                    <span class="live-badge">ELECTRÓNICA</span>
-                </div>
-                <div class="video-content-grid">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/TEieEGRKZgM" title="Compuerta Lógica NOT – El Inversor Lógico" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>Compuerta Lógica NOT – El Inversor Lógico</h3>
-                        <p>> Comprende el funcionamiento fundamental del inversor lógico y cómo invierte las señales en tus circuitos electrónicos[cite: 1].</p>
-                        <a href="https://www.youtube.com/watch?v=TEieEGRKZgM" target="_blank" class="watch-yt-btn">VER EN YOUTUBE</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="projects section-pad" id="proyectos">
+      <div class="section-head"><div><p class="section-kicker">[ 02 — DEL BANCO DE TRABAJO ]</p><h2>PROYECTOS<br><em>EN MOVIMIENTO</em></h2></div><p class="section-note">Cada proyecto empieza<br>con una pregunta.</p></div>
+      <a class="featured-project" href="https://www.youtube.com/@tecnybyte" target="_blank" rel="noopener">
+        <div class="featured-photo"></div><div class="featured-overlay"></div>
+        <div class="featured-meta"><span>PROYECTO DESTACADO</span><span>TECNYBYTE / LAB</span></div>
+        <div class="featured-bottom"><div><p class="section-kicker">PROTOTIPADO · MECATRÓNICA</p><h3>DISEÑAR.<br>PROBAR.<br><em>MEJORAR.</em></h3></div><span class="round-arrow">↗</span></div>
+      </a>
+      <div class="project-foot"><p>Documentamos el proceso, los errores y los aprendizajes. Porque el resultado importa, pero entender cómo llegamos también.</p><a class="under-link" href="https://www.youtube.com/@tecnybyte" target="_blank" rel="noopener">VER TODOS LOS PROYECTOS EN YOUTUBE <span>↗</span></a></div>
     </section>
 
-    <!-- Sección Widget Interactivo de Compuertas Lógicas -->
-    <section class="section-container" id="compuertas-interactivas">
-        <h3 class="section-title">LABORATORIO: <span>COMPUERTAS LÓGICAS</span></h3>
-        
-        <div class="about-box" style="margin-bottom: 30px; text-align: left;">
-            <p style="color: var(--text-main); font-size: 16px; margin-bottom: 10px;">
-                > ¿Por qué son importantes?
-            </p>
-            Son los bloques fundamentales de todo sistema digital y microcontrolador. Haz clic en los interruptores de entrada (0 / 1) para interactuar con las compuertas y ver cómo transforman las señales eléctricas en lógica binaria.
-        </div>
-
-        <div class="lab-container">
-            <div class="lab-controls">
-                <span class="lab-label">> ENTRADAS GLOBALES:</span>
-                <button class="input-btn" id="btn-a" onclick="toggleInput('A')">Entrada A: <span id="val-a">0</span></button>
-                <button class="input-btn" id="btn-b" onclick="toggleInput('B')">Entrada B: <span id="val-b">0</span></button>
-            </div>
-
-            <div class="specs-grid">
-                <div class="spec-card gate-card">
-                    <div class="spec-icon" style="color: var(--accent-blue);">NOT</div>
-                    <h3>Inversor Lógico</h3>
-                    <p>Invierte la señal de la Entrada A[cite: 1].</p>
-                    <div class="gate-status" id="not-output">Salida: <span>0</span></div>
-                    <div class="led-indicator" id="led-not"></div>
-                </div>
-
-                <div class="spec-card gate-card">
-                    <div class="spec-icon" style="color: var(--accent-blue);">AND</div>
-                    <h3>Conjunción</h3>
-                    <p>Activa solo si A y B están en 1.</p>
-                    <div class="gate-status" id="and-output">Salida: <span>0</span></div>
-                    <div class="led-indicator" id="led-and"></div>
-                </div>
-
-                <div class="spec-card gate-card">
-                    <div class="spec-icon" style="color: var(--accent-blue);">OR</div>
-                    <h3>Disyunción</h3>
-                    <p>Activa si A o B están en 1.</p>
-                    <div class="gate-status" id="or-output">Salida: <span>0</span></div>
-                    <div class="led-indicator" id="led-or"></div>
-                </div>
-            </div>
-        </div>
+    <section class="youtube-section" id="videos">
+      <div class="youtube-top"><div><p class="section-kicker">[ 03 — TECNYBYTE EN YOUTUBE ]</p><h2>APRENDE.<br>INSPÍRATE.<br><em>CONSTRUYE.</em></h2></div><div class="youtube-side"><p>Videos de proyectos, reparaciones, electrónica y experimentos. Acompáñanos del primer cable hasta el último tornillo.</p><a class="button button-light" href="https://www.youtube.com/@tecnybyte?sub_confirmation=1" target="_blank" rel="noopener">SUSCRIBIRME AL CANAL <span>↗</span></a></div></div>
+      <div class="video-feature">
+        <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/TEieEGRKZgM?rel=0" title="Compuerta lógica NOT — TECNYBYTE" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="video-caption"><div><span class="video-label">EN EL LABORATORIO</span><h3>Compuerta lógica NOT</h3><p>Entiende cómo funciona el inversor lógico y cómo transforma una señal.</p></div><a class="round-arrow" href="https://www.youtube.com/watch?v=TEieEGRKZgM" target="_blank" rel="noopener" aria-label="Abrir video en YouTube">↗</a></div>
+      </div>
+      <div class="youtube-bottom"><span>¿LISTO PARA EL SIGUIENTE PROYECTO?</span><a href="https://www.youtube.com/@tecnybyte" target="_blank" rel="noopener">EXPLORA EL CANAL COMPLETO ↗</a></div>
     </section>
 
-    <!-- 15. Preguntas Frecuentes -->
-    <section class="section-container">
-        <h3 class="section-title">PREGUNTAS <span>FRECUENTES</span></h3>
-        <div class="faq-grid">
-            <div class="faq-card">
-                <h4>¿Cómo colaborar?</h4>
-                <p>Puedes ponerte en contacto a través de nuestras redes oficiales o correo para proyectos conjuntos y patrocinios.</p>
-            </div>
-            <div class="faq-card">
-                <h4>¿Cómo contactar?</h4>
-                <p>Escríbenos directamente a nuestro correo de soporte o mediante nuestras redes sociales de YouTube y TikTok.</p>
-            </div>
-            <div class="faq-card">
-                <h4>¿Hacen proyectos personalizados?</h4>
-                <p>Desarrollamos sistemas embebidos, prototipos de hardware y automatización orientados a la educación y la industria.</p>
-            </div>
-        </div>
+    <section class="story split-section" id="historia">
+      <div class="section-kicker">[ 04 — NUESTRA FILOSOFÍA ]</div>
+      <div class="story-title"><h2>EL CONOCIMIENTO<br>CRECE CUANDO<br>SE <em>COMPARTE.</em></h2></div>
+      <div class="story-copy"><p class="lead">No necesitas tenerlo todo resuelto para comenzar a construir.</p><p>TECNYBYTE nació de la curiosidad por entender cómo funcionan las cosas. Hoy es una plataforma para experimentar, documentar y compartir tecnología de una forma cercana, práctica y colaborativa.</p><a class="under-link" href="https://www.instagram.com/tecnybyte/" target="_blank" rel="noopener">SÍGUENOS EN INSTAGRAM <span>↗</span></a></div>
+      <div class="story-coordinate">18°27' N<br>97°23' W<br><span>MADE IN MÉXICO</span></div>
     </section>
 
-    <!-- 16. Contacto -->
-    <section class="section-container" id="contacto">
-        <h3 class="section-title">CONTACTO <span>DIRECTO</span></h3>
-        <div class="contact-box">
-            <p>> ¿Tienes una idea o proyecto tecnológico en mente? ¡Conectemos sistemas!</p>
-            <a href="https://www.youtube.com/@tecnybyte" target="_blank" class="cta-btn">[ IR AL CANAL DE YOUTUBE ]</a>
-            <a href="https://www.tiktok.com/@tecnybyte" target="_blank" class="cta-btn secondary" style="margin-left: 15px;">[ IR A TIKTOK ]</a>
-        </div>
+    <section class="community section-pad" id="comunidad">
+      <div class="community-panel"><p class="section-kicker">[ 05 — CONSTRUYAMOS JUNTOS ]</p><h2>LAS GRANDES IDEAS<br>NO SE CONSTRUYEN<br><em>EN SOLITARIO.</em></h2><p>Comparte tus proyectos, síguenos y forma parte de una comunidad que aprende haciendo.</p><div class="social-links"><a href="https://www.youtube.com/@tecnybyte" target="_blank" rel="noopener">YOUTUBE <span>↗</span></a><a href="https://www.instagram.com/tecnybyte/" target="_blank" rel="noopener">INSTAGRAM <span>↗</span></a><a href="https://www.tiktok.com/@tecnybyte" target="_blank" rel="noopener">TIKTOK <span>↗</span></a></div></div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2026 <span>TECNYBYTE</span>. Todos los derechos reservados. Ideas • Electrónica • Automatización.</p>
-    </footer>
-
-    <!-- Enlace al Archivo JavaScript general -->
-    <script src="script.js"></script>
+  <footer class="site-footer" id="contacto"><a class="footer-brand" href="#inicio">TECNY<span>BYTE</span></a><p>IDEAS · ELECTRÓNICA · INNOVACIÓN</p><a href="mailto:tecnybyte@gmail.com">CONTACTO Y COLABORACIONES ↗</a><small>© <span id="year">2026</span> TECNYBYTE. HECHO PARA CREAR.</small></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
